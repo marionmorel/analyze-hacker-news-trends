@@ -56,3 +56,8 @@ SELECT timestamp,
 FROM hacker_news
 GROUP BY 1
 LIMIT 20;
+
+-- Task 10
+SELECT strftime('%H', timestamp), AVG(score), COUNT(*)
+FROM hacker_news
+GROUP BY 1;
