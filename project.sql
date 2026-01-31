@@ -7,3 +7,10 @@ LIMIT 5;
 -- Task 2
 SELECT SUM(score)
 FROM hacker_news;
+
+-- Task 3
+SELECT user, SUM(score)
+FROM hacker_news
+GROUP BY user
+HAVING SUM(score) > 200
+ORDER BY 2 DESC;
