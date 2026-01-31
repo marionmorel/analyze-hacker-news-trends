@@ -33,3 +33,14 @@ SELECT CASE
    ELSE 'Other'
   END AS 'Source'
 FROM hacker_news;
+
+-- Task 7
+SELECT CASE
+   WHEN url LIKE '%github%' THEN 'GitHub'
+   WHEN url LIKE '%medium.com%' THEN 'Medium'
+   WHEN url LIKE '%nytimes.com%' THEN 'New York Times'
+   ELSE 'Other'
+  END AS 'Source',
+  COUNT(*)
+FROM hacker_news
+GROUP BY 1;
