@@ -61,3 +61,9 @@ LIMIT 20;
 SELECT strftime('%H', timestamp), AVG(score), COUNT(*)
 FROM hacker_news
 GROUP BY 1;
+
+-- Task 11
+SELECT strftime('%H', timestamp) AS 'hour', ROUND(AVG(score)) AS 'average_score', COUNT(*) AS 'total_stories'
+FROM hacker_news
+WHERE timestamp IS NOT NULL
+GROUP BY 1;
