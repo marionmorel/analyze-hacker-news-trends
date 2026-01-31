@@ -17,3 +17,10 @@ ORDER BY 2 DESC;
 
 -- Task 4
 SELECT (517 + 309 + 304 + 282) / 6366.0;
+
+-- Task 5
+SELECT user, COUNT(*)
+FROM hacker_news
+WHERE url LIKE '%watch?v=dQw4w9WgXcQ%'
+GROUP BY user
+ORDER BY COUNT(*) DESC;
