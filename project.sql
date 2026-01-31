@@ -24,3 +24,12 @@ FROM hacker_news
 WHERE url LIKE '%watch?v=dQw4w9WgXcQ%'
 GROUP BY user
 ORDER BY COUNT(*) DESC;
+
+-- Task 6
+SELECT CASE
+   WHEN url LIKE '%github%' THEN 'GitHub'
+   WHEN url LIKE '%medium.com%' THEN 'Medium'
+   WHEN url LIKE '%nytimes.com%' THEN 'New York Times'
+   ELSE 'Other'
+  END AS 'Source'
+FROM hacker_news;
